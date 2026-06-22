@@ -194,16 +194,43 @@ body.loaded .hero-name .clip-i { transform: translateY(0); transition: transform
 .bigfig:hover .frame img { transform: scale(1.02); }
 .figcap { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; padding-top: 1rem; text-align: center; }
 
-.gal { display: grid; gap: clamp(.5rem, 1.4vw, 1.4rem); }
-.gal-2 { grid-template-columns: repeat(2, 1fr); }
-.gal-3 { grid-template-columns: repeat(3, 1fr); }
-.gal-4 { grid-template-columns: repeat(4, 1fr); }
+.gal { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.gal-2 .shot { width: calc((100% - 1rem) / 2); }
+.gal-3 .shot { width: calc((100% - 2rem) / 3); }
+.gal-4 .shot { width: calc((100% - 3rem) / 4); }
 .shot { cursor: zoom-in; }
 .shot:hover img { transform: scale(1.04); }
 .gal.contain .frame { background: #fff; }
 .gal.contain .frame img { object-fit: contain; }
-@media (max-width: 860px) { .gal-3, .gal-4 { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .gal-2, .gal-3, .gal-4 { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .gal-3 .shot, .gal-4 .shot { width: calc((100% - 1rem) / 2); } }
+@media (max-width: 520px) { .gal-2 .shot, .gal-3 .shot, .gal-4 .shot { width: 100%; } }
+
+/* flipbook (Auraglow booklet) */
+.flipbook { --pageW: min(40vw, 27rem); display: flex; justify-content: center; perspective: 2600px; }
+@media (max-width: 719px) { .flipbook { --pageW: min(82vw, 23rem); } }
+.book { position: relative; display: flex; transform-style: preserve-3d; box-shadow: 0 34px 70px -28px rgba(35,32,26,.5); }
+.book.two { width: calc(var(--pageW) * 2); }
+.book.one { width: var(--pageW); }
+.pg { width: var(--pageW); aspect-ratio: 1 / 1.414; background: #fff; overflow: hidden; position: relative; }
+.pg img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.book.two .pg-left { box-shadow: inset -20px 0 34px -22px rgba(0,0,0,.32); }
+.book.two .pg-right { box-shadow: inset 20px 0 34px -22px rgba(0,0,0,.32); }
+.book.two .pg-left, .book.two .pg-right, .pg-solo { cursor: pointer; }
+.leaf { position: absolute; top: 0; width: var(--pageW); height: 100%; transform-style: preserve-3d; transition: transform .85s var(--ease); z-index: 6; }
+.leaf.right { right: 0; transform-origin: left center; }
+.leaf.left { left: 0; transform-origin: right center; }
+.leaf.right.turn { transform: rotateY(-178deg); }
+.leaf.left.turn { transform: rotateY(178deg); }
+.leaf-face { position: absolute; inset: 0; backface-visibility: hidden; background: #fff; overflow: hidden; box-shadow: 0 0 40px -10px rgba(0,0,0,.25); }
+.leaf-face img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.leaf-back { transform: rotateY(180deg); }
+
+.flip-nav { display: flex; align-items: center; justify-content: center; gap: clamp(1.2rem, 3vw, 2rem); margin-top: clamp(1.4rem, 4vh, 2.2rem); }
+.flip-btn { width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-size: 1.3rem; line-height: 1; color: var(--ink); transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), transform .15s ease, opacity .3s; }
+.flip-btn:hover:not(:disabled) { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.flip-btn:active:not(:disabled) { transform: scale(.93); }
+.flip-btn:disabled { opacity: .28; cursor: default; }
+.flip-counter { font-family: var(--sans); font-size: var(--fs-label); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); min-width: 10ch; text-align: center; font-variant-numeric: tabular-nums; }
 
 .figtext { color: var(--ink-2); max-width: 64ch; margin: 2rem auto 0; }
 .figtext h4 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.3rem, 1rem + .9vw, 1.8rem); color: var(--ink); margin: 2rem 0 .5rem; letter-spacing: .02em; }

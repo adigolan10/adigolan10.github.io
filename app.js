@@ -74,6 +74,93 @@
     });
   });
 
+  /* flipbook — open-book spread you page through in order */
+  document.querySelectorAll('.flipbook').forEach(el => {
+    const pages = (el.dataset.pages || '').split(',').filter(Boolean);
+    const N = pages.length;
+    if (!N) return;
+    const section = el.closest('.proj-section');
+    const prevBtn = section.querySelector('.flip-prev');
+    const nextBtn = section.querySelector('.flip-next');
+    const counter = section.querySelector('.flip-counter');
+    const mq = window.matchMedia('(min-width: 720px)');
+    let perView = mq.matches ? 2 : 1;
+    let idx = 0;          // index (0-based) of the left/solo page
+    let animating = false;
+
+    const book = document.createElement('div');
+    book.className = 'book';
+    el.appendChild(book);
+
+    const pad = n => String(n).padStart(2, '0');
+    const pg = (src, cls) => `<div class="pg ${cls}">${src ? `<img src="${src}" alt="" loading="lazy">` : ''}</div>`;
+    const face = (src, cls) => `<div class="leaf-face ${cls}"><img src="${src || ''}" alt=""></div>`;
+
+    function paint() {
+      book.className = 'book ' + (perView === 2 ? 'two' : 'one');
+      book.innerHTML = perView === 2
+        ? pg(pages[idx], 'pg-left') + pg(pages[idx + 1], 'pg-right')
+        : pg(pages[idx], 'pg-solo');
+      const last = Math.min(idx + perView, N);
+      counter.textContent = (perView === 2 && last > idx + 1)
+        ? pad(idx + 1) + '–' + pad(last) + '  /  ' + N
+        : pad(idx + 1) + '  /  ' + N;
+      prevBtn.disabled = idx <= 0;
+      nextBtn.disabled = idx + perView >= N;
+      book.querySelector('.pg-left')?.addEventListener('click', () => go(-1));
+      book.querySelector('.pg-right')?.addEventListener('click', () => go(1));
+      book.querySelector('.pg-solo')?.addEventListener('click', () => go(1));
+    }
+
+    function go(dir) {
+      if (animating) return;
+      const target = idx + dir * perView;
+      if (target < 0 || target >= N) return;
+      if (reduce) { idx = target; paint(); return; }
+      animating = true;
+      const leaf = document.createElement('div');
+      if (perView === 2 && dir > 0) {
+        leaf.className = 'leaf right';
+        leaf.innerHTML = face(pages[idx + 1], 'leaf-front') + face(pages[target], 'leaf-back');
+        book.innerHTML = pg(pages[idx], 'pg-left') + pg(pages[target + 1], 'pg-right');
+      } else if (perView === 2) {
+        leaf.className = 'leaf left';
+        leaf.innerHTML = face(pages[idx], 'leaf-front') + face(pages[idx - 1], 'leaf-back');
+        book.innerHTML = pg(pages[target], 'pg-left') + pg(pages[idx + 1], 'pg-right');
+      } else {
+        leaf.className = 'leaf ' + (dir > 0 ? 'right' : 'left');
+        leaf.innerHTML = face(pages[idx], 'leaf-front') + face(pages[target], 'leaf-back');
+        book.innerHTML = pg(pages[target], 'pg-solo');
+      }
+      book.appendChild(leaf);
+      requestAnimationFrame(() => requestAnimationFrame(() => leaf.classList.add('turn')));
+      let finished = false;
+      const done = () => { if (finished) return; finished = true; idx = target; animating = false; paint(); };
+      leaf.addEventListener('transitionend', done, { once: true });
+      setTimeout(done, 1150);
+    }
+
+    prevBtn.addEventListener('click', () => go(-1));
+    nextBtn.addEventListener('click', () => go(1));
+    mq.addEventListener('change', e => {
+      perView = e.matches ? 2 : 1;
+      if (perView === 2) idx -= idx % 2;
+      idx = Math.max(0, Math.min(idx, N - 1));
+      animating = false;
+      paint();
+    });
+    window.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      if (document.querySelector('.lightbox.open')) return;
+      const r = el.getBoundingClientRect();
+      if (r.bottom < 60 || r.top > window.innerHeight - 60) return;
+      e.preventDefault();
+      go(e.key === 'ArrowRight' ? 1 : -1);
+    });
+
+    paint();
+  });
+
   /* lightbox */
   const items = [...document.querySelectorAll('[data-lb]')];
   if (items.length) {
