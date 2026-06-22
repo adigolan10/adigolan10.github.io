@@ -1,0 +1,4 @@
+# build scripts (contain local paths; not needed for the live site)
+build_assets.py
+build_site.py
+.DS_Store

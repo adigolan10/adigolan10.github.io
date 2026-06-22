@@ -1,0 +1,366 @@
+{
+  "designer-house": [
+    {
+      "key": "render",
+      "w": 2400,
+      "h": 1600,
+      "src": "designer-house/render-01.jpg"
+    },
+    {
+      "key": "render",
+      "w": 1440,
+      "h": 1079,
+      "src": "designer-house/render-02.jpg"
+    },
+    {
+      "key": "render",
+      "w": 1440,
+      "h": 1079,
+      "src": "designer-house/render-03.jpg"
+    },
+    {
+      "key": "render",
+      "w": 1440,
+      "h": 1079,
+      "src": "designer-house/render-04.jpg"
+    },
+    {
+      "key": "render",
+      "w": 1440,
+      "h": 1079,
+      "src": "designer-house/render-05.jpg"
+    },
+    {
+      "key": "render",
+      "w": 2400,
+      "h": 1600,
+      "src": "designer-house/render-06.jpg"
+    },
+    {
+      "key": "drawing",
+      "w": 1340,
+      "h": 1024,
+      "src": "designer-house/drawing-01.jpg"
+    },
+    {
+      "key": "drawing",
+      "w": 701,
+      "h": 1043,
+      "src": "designer-house/drawing-02.jpg"
+    },
+    {
+      "key": "drawing",
+      "w": 699,
+      "h": 1043,
+      "src": "designer-house/drawing-03.jpg"
+    },
+    {
+      "key": "drawing",
+      "w": 699,
+      "h": 1024,
+      "src": "designer-house/drawing-04.jpg"
+    },
+    {
+      "key": "drawing",
+      "w": 699,
+      "h": 704,
+      "src": "designer-house/drawing-05.jpg"
+    },
+    {
+      "key": "drawing",
+      "w": 756,
+      "h": 757,
+      "src": "designer-house/drawing-06.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1069,
+      "h": 1900,
+      "src": "designer-house/process-01.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1900,
+      "h": 1425,
+      "src": "designer-house/process-02.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1425,
+      "h": 1900,
+      "src": "designer-house/process-03.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1625,
+      "h": 1900,
+      "src": "designer-house/process-04.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1900,
+      "h": 1700,
+      "src": "designer-house/process-05.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1425,
+      "h": 1900,
+      "src": "designer-house/process-06.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1425,
+      "h": 1900,
+      "src": "designer-house/process-07.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1425,
+      "h": 1900,
+      "src": "designer-house/process-08.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1900,
+      "h": 1425,
+      "src": "designer-house/process-09.jpg"
+    },
+    {
+      "key": "process",
+      "w": 1339,
+      "h": 1900,
+      "src": "designer-house/process-10.jpg"
+    }
+  ],
+  "weisel-15": [
+    {
+      "key": "plan",
+      "w": 1337,
+      "h": 802,
+      "src": "weisel-15/elevation-east.jpg"
+    },
+    {
+      "key": "plan",
+      "w": 1337,
+      "h": 802,
+      "src": "weisel-15/plan-first.jpg"
+    },
+    {
+      "key": "plan",
+      "w": 1337,
+      "h": 802,
+      "src": "weisel-15/plan-ground.jpg"
+    },
+    {
+      "key": "plan",
+      "w": 1337,
+      "h": 802,
+      "src": "weisel-15/plan-second.jpg"
+    },
+    {
+      "key": "plan",
+      "w": 1337,
+      "h": 802,
+      "src": "weisel-15/section-aa.jpg"
+    },
+    {
+      "key": "sheet",
+      "w": 1200,
+      "h": 2400,
+      "src": "weisel-15/sheet-1.jpg"
+    },
+    {
+      "key": "sheet",
+      "w": 1200,
+      "h": 2400,
+      "src": "weisel-15/sheet-2.jpg"
+    },
+    {
+      "key": "render",
+      "w": 1733,
+      "h": 1505,
+      "src": "weisel-15/render-01.jpg"
+    },
+    {
+      "key": "board",
+      "w": 2200,
+      "h": 2934,
+      "src": "weisel-15/program-board.jpg"
+    }
+  ],
+  "aura-lamp": [
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-01.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-02.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-03.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-04.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-05.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-06.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-07.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-08.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-09.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-10.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-11.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-12.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-13.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-14.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-15.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-16.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-17.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-18.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-19.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-20.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-21.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-22.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-23.jpg"
+    },
+    {
+      "key": "booklet",
+      "w": 1700,
+      "h": 2412,
+      "src": "aura-lamp/booklet-24.jpg"
+    },
+    {
+      "key": "video",
+      "w": 0,
+      "h": 0,
+      "src": "aura-lamp/lamp.mp4"
+    }
+  ],
+  "eden-cinema": [
+    {
+      "key": "render",
+      "w": 2400,
+      "h": 1600,
+      "src": "eden-cinema/render-01.jpg"
+    }
+  ],
+  "more": [
+    {
+      "key": "work",
+      "w": 2200,
+      "h": 1467,
+      "src": "more/kitchen-on-a-book.jpg"
+    },
+    {
+      "key": "work",
+      "w": 2200,
+      "h": 1467,
+      "src": "more/ribs-model.jpg"
+    }
+  ]
+}
