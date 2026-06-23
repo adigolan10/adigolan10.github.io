@@ -2,3 +2,5 @@
 build_assets.py
 build_site.py
 .DS_Store
+# CV PDF kept private (contains phone number; not for the public site)
+Adi-Golan-CV-2026.pdf

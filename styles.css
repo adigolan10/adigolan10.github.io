@@ -191,6 +191,8 @@ body.loaded .hero-name .clip-i { transform: translateY(0); transition: transform
 .bigfig:hover .frame img { transform: scale(1.02); }
 /* project hero image: contained + a bit smaller (not full-screen) */
 .hero-fig .frame { max-width: 66rem; margin-inline: auto; }
+/* a "full" image shown small + centered (e.g. dense presentation boards) */
+.bigfig--narrow .frame { max-width: 30rem; margin-inline: auto; }
 .figcap { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; padding-top: 1rem; text-align: center; }
 
 .gal { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
@@ -199,6 +201,7 @@ body.loaded .hero-name .clip-i { transform: translateY(0); transition: transform
 .gal-4 .shot { width: calc((100% - 3rem) / 4); }
 .shot { cursor: zoom-in; }
 .shot:hover img { transform: scale(1.04); }
+.gal-caps .shot-cap { display: block; margin-top: .7rem; font-family: var(--sans); font-size: .82rem; font-weight: 400; letter-spacing: .03em; line-height: 1.45; color: var(--ink-2); text-align: center; }
 .gal.contain .frame { background: #fff; }
 .gal.contain .frame img { object-fit: contain; }
 @media (max-width: 860px) { .gal-3 .shot, .gal-4 .shot { width: calc((100% - 1rem) / 2); } }
@@ -206,7 +209,7 @@ body.loaded .hero-name .clip-i { transform: translateY(0); transition: transform
 
 /* flipbook (Auraglow booklet) */
 .flipbook { --pageW: min(40vw, 27rem); display: flex; justify-content: center; perspective: 2600px; }
-@media (max-width: 719px) { .flipbook { --pageW: min(82vw, 23rem); } }
+@media (max-width: 719px) { .flipbook { --pageW: min(90vw, 28rem); } }
 .book { position: relative; display: flex; transform-style: preserve-3d; box-shadow: 0 34px 70px -28px rgba(35,32,26,.5); }
 .book.two { width: calc(var(--pageW) * 2); }
 .book.one { width: var(--pageW); }
