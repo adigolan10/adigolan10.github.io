@@ -103,7 +103,7 @@ body.loaded .hero-full .frame img { transform: scale(1); opacity: 1; transition:
 .hero-overlay { position: absolute; inset: auto 0 clamp(3.5rem, 11vh, 8rem) 0; z-index: 2; text-align: center; color: #fff; padding-inline: var(--pad); }
 .hero-eyebrow { font-family: var(--sans); font-size: var(--fs-label); font-weight: 500; letter-spacing: .26em; text-transform: uppercase; opacity: .92; }
 .hero-name { font-family: var(--serif); font-weight: 400; font-size: clamp(2.6rem, 1.6rem + 4vw, 6rem); letter-spacing: .12em; text-transform: uppercase; line-height: 1; margin: clamp(1rem, 2.5vh, 1.6rem) 0 clamp(1.2rem, 3vh, 2rem); }
-.hero-bio { font-family: var(--sans); font-weight: 300; font-size: clamp(1rem, .92rem + .5vw, 1.3rem); line-height: 1.5; max-width: 52ch; margin-inline: auto; opacity: .96; }
+.hero-bio { font-family: var(--sans); font-weight: 300; font-size: clamp(1rem, .92rem + .5vw, 1.3rem); line-height: 1.55; max-width: 50ch; margin-inline: auto; opacity: .96; text-transform: uppercase; letter-spacing: .04em; }
 .hero-scroll { position: absolute; bottom: clamp(1.2rem, 3vh, 2rem); left: 50%; transform: translateX(-50%); z-index: 2; color: #fff; font-family: var(--sans); font-size: var(--fs-label); letter-spacing: .2em; text-transform: uppercase; opacity: 0; animation: bob 2.6s var(--ease) infinite; }
 body.loaded .hero-scroll { opacity: .82; transition: opacity 1s ease 1.15s; }
 @keyframes bob { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
@@ -236,13 +236,13 @@ body.loaded .hero-name .clip-i { transform: translateY(0); transition: transform
 .figtext h4:first-child { margin-top: 0; }
 .figtext em { font-style: italic; color: var(--ink); }
 
-.videowrap { position: relative; background: #161510; overflow: hidden; }
-.videowrap video { width: 100%; display: block; }
+.videowrap { position: relative; background: #161510; overflow: hidden; max-width: 30rem; margin-inline: auto; aspect-ratio: 1700 / 2412; }
+.videowrap video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .videowrap .vposter { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .6s; }
 .videowrap .playbtn { position: absolute; inset: 0; display: grid; place-items: center; z-index: 3; transition: opacity .4s; cursor: pointer; }
-.videowrap .playbtn .circle { width: clamp(64px, 8vw, 96px); height: clamp(64px, 8vw, 96px); border-radius: 50%; border: 1px solid rgba(255,255,255,.85); display: grid; place-items: center; transition: transform .5s var(--ease), background .4s; }
-.videowrap .playbtn .circle span { font-family: var(--sans); font-size: .62rem; font-weight: 500; letter-spacing: .12em; color: #fff; text-transform: uppercase; }
-.videowrap:hover .playbtn .circle { transform: scale(1.08); background: rgba(255,255,255,.14); }
+.videowrap .playbtn .circle { width: clamp(64px, 8vw, 96px); height: clamp(64px, 8vw, 96px); border-radius: 50%; border: 1px solid rgba(255,255,255,.9); background: rgba(0,0,0,.2); backdrop-filter: blur(2px); display: grid; place-items: center; transition: transform .5s var(--ease), background .4s; }
+.videowrap .playbtn .circle svg { width: 34%; height: 34%; fill: #fff; margin-left: 8%; }
+.videowrap:hover .playbtn .circle { transform: scale(1.08); background: rgba(255,255,255,.18); }
 .videowrap.playing .playbtn, .videowrap.playing .vposter { opacity: 0; pointer-events: none; }
 
 .dl { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--sans); font-size: var(--fs-label); font-weight: 500; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--line); padding: .85rem 1.4rem; border-radius: 100px; transition: background .35s, color .35s, border-color .35s; }
